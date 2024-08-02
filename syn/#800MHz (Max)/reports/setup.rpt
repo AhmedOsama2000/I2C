@@ -1,0 +1,622 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : i2c_master_top
+Version: G-2012.06-SP2
+Date   : Fri Jul 20 11:29:39 2018
+****************************************
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary_ss0p95vn40c
+Wire Load Model Mode: top
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[13]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U54/ZN (NOR3_X1)         0.09       0.98 r
+  byte_controller/bit_controller/U36/ZN (INV_X1)          0.03       1.01 f
+  byte_controller/bit_controller/U144/ZN (OR4_X1)         0.09       1.11 f
+  byte_controller/bit_controller/U143/ZN (OAI21_X1)       0.03       1.14 r
+  byte_controller/bit_controller/c_state_reg[13]/D (DFFR_X1)
+                                                          0.01       1.15 r
+  data arrival time                                                  1.15
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[13]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -1.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[0]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U54/ZN (NOR3_X1)         0.09       0.98 r
+  byte_controller/bit_controller/U82/ZN (NAND4_X1)        0.05       1.03 f
+  byte_controller/bit_controller/U81/ZN (OAI21_X1)        0.03       1.06 r
+  byte_controller/bit_controller/c_state_reg[0]/D (DFFR_X1)
+                                                          0.01       1.07 r
+  data arrival time                                                  1.07
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[0]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -1.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[5]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U54/ZN (NOR3_X1)         0.09       0.98 r
+  byte_controller/bit_controller/U36/ZN (INV_X1)          0.03       1.01 f
+  byte_controller/bit_controller/U76/ZN (OAI22_X1)        0.04       1.05 r
+  byte_controller/bit_controller/c_state_reg[5]/D (DFFR_X1)
+                                                          0.01       1.06 r
+  data arrival time                                                  1.06
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[5]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -1.06
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.09
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[15]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[0]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[0]/Q (DFFR_X1)
+                                                          0.09       0.09 f
+  byte_controller/bit_controller/sub_245/A[0] (i2c_master_bit_ctrl_DW01_dec_1)
+                                                          0.00       0.09 f
+  byte_controller/bit_controller/sub_245/U38/ZN (NOR2_X1)
+                                                          0.05       0.14 r
+  byte_controller/bit_controller/sub_245/U39/ZN (INV_X1)
+                                                          0.03       0.17 f
+  byte_controller/bit_controller/sub_245/U13/ZN (NOR2_X1)
+                                                          0.04       0.21 r
+  byte_controller/bit_controller/sub_245/U7/ZN (INV_X1)
+                                                          0.03       0.24 f
+  byte_controller/bit_controller/sub_245/U10/ZN (NOR2_X1)
+                                                          0.04       0.28 r
+  byte_controller/bit_controller/sub_245/U6/ZN (INV_X1)
+                                                          0.03       0.31 f
+  byte_controller/bit_controller/sub_245/U11/ZN (NOR2_X1)
+                                                          0.04       0.35 r
+  byte_controller/bit_controller/sub_245/U5/ZN (INV_X1)
+                                                          0.03       0.38 f
+  byte_controller/bit_controller/sub_245/U12/ZN (NOR2_X1)
+                                                          0.04       0.42 r
+  byte_controller/bit_controller/sub_245/U8/ZN (INV_X1)
+                                                          0.03       0.45 f
+  byte_controller/bit_controller/sub_245/U1/ZN (OR2_X1)
+                                                          0.06       0.51 f
+  byte_controller/bit_controller/sub_245/U17/ZN (NOR2_X1)
+                                                          0.05       0.56 r
+  byte_controller/bit_controller/sub_245/U49/ZN (NAND2_X1)
+                                                          0.04       0.60 f
+  byte_controller/bit_controller/sub_245/U15/ZN (NOR2_X1)
+                                                          0.05       0.65 r
+  byte_controller/bit_controller/sub_245/U40/ZN (NAND2_X1)
+                                                          0.04       0.70 f
+  byte_controller/bit_controller/sub_245/U16/ZN (NOR2_X1)
+                                                          0.05       0.75 r
+  byte_controller/bit_controller/sub_245/U48/ZN (NAND2_X1)
+                                                          0.04       0.79 f
+  byte_controller/bit_controller/sub_245/U2/ZN (INV_X1)
+                                                          0.03       0.82 r
+  byte_controller/bit_controller/sub_245/U3/ZN (NAND2_X1)
+                                                          0.04       0.86 f
+  byte_controller/bit_controller/sub_245/U14/ZN (NOR2_X1)
+                                                          0.05       0.91 r
+  byte_controller/bit_controller/sub_245/U31/Z (XOR2_X1)
+                                                          0.06       0.97 r
+  byte_controller/bit_controller/sub_245/SUM[15] (i2c_master_bit_ctrl_DW01_dec_1)
+                                                          0.00       0.97 r
+  byte_controller/bit_controller/U96/ZN (NAND2_X1)        0.03       0.99 f
+  byte_controller/bit_controller/U95/ZN (OAI221_X1)       0.03       1.03 r
+  byte_controller/bit_controller/cnt_reg[15]/D (DFFR_X1)
+                                                          0.01       1.03 r
+  data arrival time                                                  1.03
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/cnt_reg[15]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -1.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[14]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[0]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[0]/Q (DFFR_X1)
+                                                          0.09       0.09 f
+  byte_controller/bit_controller/sub_245/A[0] (i2c_master_bit_ctrl_DW01_dec_1)
+                                                          0.00       0.09 f
+  byte_controller/bit_controller/sub_245/U38/ZN (NOR2_X1)
+                                                          0.05       0.14 r
+  byte_controller/bit_controller/sub_245/U39/ZN (INV_X1)
+                                                          0.03       0.17 f
+  byte_controller/bit_controller/sub_245/U13/ZN (NOR2_X1)
+                                                          0.04       0.21 r
+  byte_controller/bit_controller/sub_245/U7/ZN (INV_X1)
+                                                          0.03       0.24 f
+  byte_controller/bit_controller/sub_245/U10/ZN (NOR2_X1)
+                                                          0.04       0.28 r
+  byte_controller/bit_controller/sub_245/U6/ZN (INV_X1)
+                                                          0.03       0.31 f
+  byte_controller/bit_controller/sub_245/U11/ZN (NOR2_X1)
+                                                          0.04       0.35 r
+  byte_controller/bit_controller/sub_245/U5/ZN (INV_X1)
+                                                          0.03       0.38 f
+  byte_controller/bit_controller/sub_245/U12/ZN (NOR2_X1)
+                                                          0.04       0.42 r
+  byte_controller/bit_controller/sub_245/U8/ZN (INV_X1)
+                                                          0.03       0.45 f
+  byte_controller/bit_controller/sub_245/U1/ZN (OR2_X1)
+                                                          0.06       0.51 f
+  byte_controller/bit_controller/sub_245/U17/ZN (NOR2_X1)
+                                                          0.05       0.56 r
+  byte_controller/bit_controller/sub_245/U49/ZN (NAND2_X1)
+                                                          0.04       0.60 f
+  byte_controller/bit_controller/sub_245/U15/ZN (NOR2_X1)
+                                                          0.05       0.65 r
+  byte_controller/bit_controller/sub_245/U40/ZN (NAND2_X1)
+                                                          0.04       0.70 f
+  byte_controller/bit_controller/sub_245/U16/ZN (NOR2_X1)
+                                                          0.05       0.75 r
+  byte_controller/bit_controller/sub_245/U48/ZN (NAND2_X1)
+                                                          0.04       0.79 f
+  byte_controller/bit_controller/sub_245/U2/ZN (INV_X1)
+                                                          0.03       0.82 r
+  byte_controller/bit_controller/sub_245/U3/ZN (NAND2_X1)
+                                                          0.04       0.86 f
+  byte_controller/bit_controller/sub_245/U19/ZN (XNOR2_X1)
+                                                          0.06       0.92 f
+  byte_controller/bit_controller/sub_245/SUM[14] (i2c_master_bit_ctrl_DW01_dec_1)
+                                                          0.00       0.92 f
+  byte_controller/bit_controller/U98/ZN (NAND2_X1)        0.03       0.95 r
+  byte_controller/bit_controller/U97/ZN (OAI221_X1)       0.04       0.99 f
+  byte_controller/bit_controller/cnt_reg[14]/D (DFFR_X1)
+                                                          0.01       1.00 f
+  data arrival time                                                  1.00
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/cnt_reg[14]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -1.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.15
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[7]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U66/ZN (OAI22_X1)        0.07       0.96 r
+  byte_controller/bit_controller/c_state_reg[7]/D (DFFR_X1)
+                                                          0.01       0.97 r
+  data arrival time                                                  0.97
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[7]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/sda_chk_reg
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U11/ZN (OAI22_X1)        0.07       0.96 r
+  byte_controller/bit_controller/sda_chk_reg/D (DFFR_X1)
+                                                          0.01       0.97 r
+  data arrival time                                                  0.97
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/sda_chk_reg/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[1]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U75/ZN (OAI22_X1)        0.07       0.96 r
+  byte_controller/bit_controller/c_state_reg[1]/D (DFFR_X1)
+                                                          0.01       0.97 r
+  data arrival time                                                  0.97
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[1]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[2]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U74/ZN (OAI22_X1)        0.07       0.96 r
+  byte_controller/bit_controller/c_state_reg[2]/D (DFFR_X1)
+                                                          0.01       0.97 r
+  data arrival time                                                  0.97
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[2]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: byte_controller/bit_controller/c_state_reg[6]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[3]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/c_state_reg[6]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[6]/QN (DFFR_X1)
+                                                          0.08       0.08 r
+  byte_controller/bit_controller/U90/ZN (AND3_X1)         0.06       0.14 r
+  byte_controller/bit_controller/U80/ZN (AND2_X1)         0.05       0.19 r
+  byte_controller/bit_controller/U194/ZN (NAND4_X1)       0.06       0.25 f
+  byte_controller/bit_controller/U198/ZN (INV_X1)         0.04       0.29 r
+  byte_controller/bit_controller/U88/ZN (AND3_X1)         0.06       0.35 r
+  byte_controller/bit_controller/U208/ZN (NAND4_X1)       0.05       0.40 f
+  byte_controller/bit_controller/U203/ZN (INV_X1)         0.04       0.44 r
+  byte_controller/bit_controller/U224/ZN (NOR4_X1)        0.03       0.46 f
+  byte_controller/bit_controller/U202/ZN (NAND4_X1)       0.04       0.50 r
+  byte_controller/bit_controller/U200/ZN (INV_X1)         0.03       0.53 f
+  byte_controller/bit_controller/U171/ZN (NAND2_X1)       0.02       0.55 r
+  byte_controller/bit_controller/U212/ZN (NOR2_X1)        0.02       0.57 f
+  byte_controller/bit_controller/U93/ZN (OAI21_X2)        0.12       0.69 r
+  byte_controller/bit_controller/U8/ZN (INV_X1)           0.07       0.77 f
+  byte_controller/bit_controller/U23/ZN (NOR2_X1)         0.06       0.82 r
+  byte_controller/bit_controller/U3/ZN (INV_X1)           0.07       0.89 f
+  byte_controller/bit_controller/U73/ZN (OAI22_X1)        0.07       0.96 r
+  byte_controller/bit_controller/c_state_reg[3]/D (DFFR_X1)
+                                                          0.01       0.97 r
+  data arrival time                                                  0.97
+
+  clock wb_clk_i (rise edge)                              1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.06       1.19
+  byte_controller/bit_controller/c_state_reg[3]/CK (DFFR_X1)
+                                                          0.00       1.19 r
+  library setup time                                     -0.04       1.15
+  data required time                                                 1.15
+  --------------------------------------------------------------------------
+  data required time                                                 1.15
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+1

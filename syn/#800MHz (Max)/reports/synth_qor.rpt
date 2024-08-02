@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : qor
+Design : i2c_master_top
+Version: G-2012.06-SP2
+Date   : Fri Jul 20 11:29:39 2018
+****************************************
+
+
+  Timing Path Group 'wb_clk_i'
+  -----------------------------------
+  Levels of Logic:              20.00
+  Critical Path Length:          1.15
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:      1.25
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          4
+  Hierarchical Port Count:        146
+  Leaf Cell Count:                682
+  Buf/Inv Cell Count:             116
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       529
+  Sequential Cell Count:          153
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      549.556003
+  Noncombinational Area:   810.502022
+  Buf/Inv Area:             61.712001
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:              1360.058025
+  Design Area:            1360.058025
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           809
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: 192.168.211.130
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.09
+  Logic Optimization:                  0.25
+  Mapping Optimization:                0.42
+  -----------------------------------------
+  Overall Compile Time:                1.18
+  Overall Compile Wall Clock Time:     1.36
+
+1

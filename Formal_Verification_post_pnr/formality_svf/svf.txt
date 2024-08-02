@@ -1,0 +1,1 @@
+# Active SVF file /home/ahesham/ASIC_Course/I2C/syn/scripts/i2c_master_top.svf

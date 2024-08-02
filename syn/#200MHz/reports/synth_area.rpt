@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : i2c_master_top
+Version: G-2012.06-SP2
+Date   : Fri Jul 20 11:24:07 2018
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary_ss0p95vn40c (File: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/lib/Front_End/Liberty/NLDM/NangateOpenCellLibrary_ss0p95vn40c.db)
+
+Number of ports:                           33
+Number of nets:                           248
+Number of cells:                          173
+Number of combinational cells:            118
+Number of sequential cells:                54
+Number of macros:                           0
+Number of buf/inv:                         20
+Number of references:                      22
+
+Combinational area:        542.640003
+Buf/Inv area:               59.052001
+Noncombinational area:     810.502022
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          1353.142025
+Total area:                 undefined
+1

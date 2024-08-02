@@ -1,0 +1,84 @@
+#@ # 
+#@ # Running fm_shell Version G-2012.06-SP2 for amd64 -- Aug 23, 2012
+#@ # Date:   Thu Aug  2 08:06:52 2018
+#@ # Run by: ahesham@192.168.211.130
+#@ 
+
+source /usr/synopsys/Formality/admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /usr/synopsys/Formality/admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /usr/synopsys/Formality/admin/setup/.synopsys_fm.setup
+
+pwd
+############################  Search PATH ################################
+lappend search_path "/home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/lib/Front_End/Liberty/NLDM"
+lappend search_path "/home/ahesham/ASIC_Course/I2C/rtl"
+lappend search_path "/home/ahesham/ASIC_Course/I2C/pnr/output"
+########################### Define Top Module ############################
+set TOP_MODULE i2c_master_top
+######################### Formality Setup File ###########################
+set synopsys_auto_setup true
+set_svf  "/home/ahesham/ASIC_Course/I2C/pnr/output/i2c_master_top.svf"
+set_svf  "/home/ahesham/ASIC_Course/I2C/syn/scripts/i2c_master_top.svf"
+read_db -container Ref "NangateOpenCellLibrary_ss0p95vn40c.db"
+read_verilog -container Ref "timescale.v"
+read_verilog -container Ref "i2c_master_defines.v"
+read_verilog -container Ref "i2c_master_bit_ctrl.v"
+read_verilog -container Ref "i2c_master_byte_ctrl.v"
+read_verilog -container Ref "i2c_master_top.v"
+set_reference_design i2c_master_top
+set_top i2c_master_top
+read_db -container Imp "NangateOpenCellLibrary_ss0p95vn40c.db"
+read_verilog -container Imp -netlist "/home/ahesham/ASIC_Course/I2C/pnr/output/i2c_master_top.v"
+read_verilog -container Imp -netlist "/home/ahesham/ASIC_Course/I2C/pnr/output/i2c_master_top_icc.v"
+set_implementation_design i2c_master_top
+set_top i2c_master_top
+match
+set successful [verify]
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+report_passing_points > "./reports/passing_points.rpt"
+report_failing_points > "./reports/failing_points.rpt"
+report_aborted_points > "./reports/aborted_points.rpt"
+report_unverified_points > "./reports/unverified_points.rpt"
+start_gui 

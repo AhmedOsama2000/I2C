@@ -1,0 +1,43 @@
+
+Name of design : i2c_master_top
+Number of cell instances in the design : 680
+Number of cell instance masters in the library : 36
+
+Processing power net VSS ...
+Number of power net wires : 698
+Number of vias : 2271
+Average power dissipation in i2c_master_top :   500.00 mW
+Power supply voltage :     1.10 V
+Assigning vias begins
+Assigning power net wires ...
+Reading virtual power pads
+Extracting power net VSS ...
+Number of power pad nodes connecting to power net VSS : 20
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 20
+Number of resistors in VSS : 12070
+Number of nodes in VSS : 8224
+Performing network simulation
+Assigning netlists to simulation engine begins
+Assigning netlists to simulation engine finished
+Maximum IR drop in i2c_master_top : 27.65 mV
+Maximum current in i2c_master_top : 31.581 mA
+
+Processing power net VDD ...
+Number of power net wires : 485
+Number of vias : 2129
+Average power dissipation in i2c_master_top :   500.00 mW
+Power supply voltage :     1.10 V
+Assigning vias begins
+Assigning power net wires ...
+Reading virtual power pads
+Extracting power net VDD ...
+Number of power pad nodes connecting to power net VDD : 24
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 24
+Number of resistors in VDD : 10166
+Number of nodes in VDD : 6938
+Performing network simulation
+Assigning netlists to simulation engine begins
+Assigning netlists to simulation engine finished
+Maximum IR drop in i2c_master_top : 30.91 mV
+Maximum current in i2c_master_top : 29.869 mA
+Overall takes     0.17 seconds
